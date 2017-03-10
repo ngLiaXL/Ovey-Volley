@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
+import butterknife.ButterKnife;
+
 public abstract class BaseActivity extends FragmentActivity {
 
     public Context mContext;
@@ -18,6 +20,7 @@ public abstract class BaseActivity extends FragmentActivity {
         mContext = this;
         initPreparation();
         setContentView();
+        ButterKnife.bind(this) ;
         initUI();
         initListener();
         initData();

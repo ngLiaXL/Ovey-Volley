@@ -3,6 +3,7 @@ package com.ldroid.kwei.module.main;
 import android.content.Context;
 
 import com.ldroid.kwei.R;
+import com.ldroid.kwei.common.trace.Timber;
 import com.ldroid.kwei.common.ui.BaseActivity;
 
 import butterknife.OnClick;
@@ -25,7 +26,7 @@ public class MainActivity extends BaseActivity implements  MainContract.View {
 
 	@Override
 	protected void initUI() {
-
+		Timber.plant(new Timber.DebugTree());
 	}
 
 	@Override
@@ -41,7 +42,8 @@ public class MainActivity extends BaseActivity implements  MainContract.View {
 
 	@OnClick(R.id.send_http)
 	public void onClickWeather(){
-
+		Timber.tag("MainAc");
+		Timber.d("aaaaaaaaaaaabbbbbbbbbcccccccc");
 	}
 
 	@Override
