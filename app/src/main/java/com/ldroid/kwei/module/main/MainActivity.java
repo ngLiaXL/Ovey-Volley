@@ -26,7 +26,6 @@ public class MainActivity extends BaseActivity implements  MainContract.View {
 
 	@Override
 	protected void initUI() {
-		Timber.plant(new Timber.DebugTree());
 	}
 
 	@Override
